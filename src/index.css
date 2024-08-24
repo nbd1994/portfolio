@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  /* font-family: "Space Grotesk", sans-serif; */
+  @apply font-mono;
+  color: #ffff;
+  @apply bg-[#333333];
+}
+/* h2{
+  @apply text-xl  md:text-4xl
+} */
+/* p{
+  @apply text-xl tracking-tight leading-relaxed
+} */
+span{
+  @apply text-yellow-600
+}
+
+.bg-primary-color{
+  @apply bg-yellow-600
+}
+.secondary-color:hover{
+  @apply bg-yellow-600
+}
