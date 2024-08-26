@@ -1,18 +1,23 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import SingleProject from './SingleProject.jsx';
 import App from './App.jsx'
 import './index.css'
 
+
+const router = createBrowserRouter(
+  [
+    {
+      path:"/", element: <App />
+    },
+    {
+      path:"/project/:id", element: <SingleProject />
+    }
+  ]
+);
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <Router>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/project/:id" element={<SingleProject />} />
-        {/* <Route path='*' element={<Error />} /> */}
-      </Routes>
-    </Router>
+    <RouterProvider router={router}/>
   </StrictMode>
 );

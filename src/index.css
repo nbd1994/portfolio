@@ -19,7 +19,7 @@ span{
 }
 
 .bg-primary-color{
-  @apply bg-yellow-600
+  @apply bg-yellow-400;
 }
 .secondary-color:hover{
   @apply bg-yellow-600
